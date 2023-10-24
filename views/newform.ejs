@@ -1,0 +1,40 @@
+<% layout('layouts/boilerplate')%>
+    <!-- <form></form> -->
+
+<h1 class="text-center">Enter the following details to add cafe.</h1>
+
+  <form action="/cafes" method="POST" class="py-5">
+    <div class="mb-3">
+        <label for="formFile" class="form-label">Cafe Name</label>
+        <input class="form-control" type="text" id="formFile" name="cafe[cafename]" placeholder="Enter cafe name">
+      </div>
+      <div class="mb-3">
+        <label for="formFileMultiple" class="form-label">Owner Name</label>
+        <input class="form-control" type="text" id="formFileMultiple" name="cafe[cafeowner]" placeholder="Name of owner">
+      </div>
+      <div class="mb-3">
+        <label for="formFileMultiple" class="form-label">Address</label>
+        <input class="form-control" type="text" id="formFileMultiple" name="cafe[cafeaddress]" placeholder="location of cafe">
+      </div>
+      <div class="mb-3">
+        <label for="formFileDisabled" class="form-label">Cafe Description</label>
+        <input class="form-control" type="text" id="formFileDisabled" name="cafe[cafedescription]" placeholder="Brief description">
+      </div>
+      <div class="mb-3">
+        <label for="formFileMultiple" class="form-label">Image URL</label>
+        <input class="form-control" type="text" id="formFileMultiple" name="cafe[cafeimage]" placeholder="Enter the link to the image">
+      </div>
+      <!-- <div class="mb-3">
+        <label for="formFileSm" class="form-label">Closing Time</label>
+        <input class="form-control form-control-sm" id="formFileSm" type="time">
+      </div> -->
+      <!-- <div>
+        <label for="formFileLg" class="form-label">Choose Image</label>
+        <input class="form-control form-control-lg" id="formFileLg" type="file">
+      </div> -->
+
+      <button class="btn btn-primary">Submit</button>
+      <a class="btn btn-primary" href="/cafes">Back</a>
+  </form>
+  
+

@@ -1,0 +1,24 @@
+<% layout('layouts/boilerplate')%>
+    <h1 class="text-center py-5">All Cafes</h1>
+
+
+    <div>
+        <%for(caf of data){ %>
+            <div class="card" mb-3>
+               <div class="row">
+                 <div class="col-md-4">
+                  <img class="img-fluid" src="<%=caf.cafeimage %>">
+                 </div>
+                 <div class="col-md-8">
+                    <div class="card-body">
+                        <h3 class="card-title"><%= caf.cafename %></h3>
+                       <h4 class="card-address"><%= caf.cafeaddress %></h4>
+                    <h6 class="card-description"><%= caf.cafedescription %></h6>
+                    <a class="btn btn-primary" href="cafes/show/<%=caf._id %>">View <%=caf.cafename %></a>
+                    </div>
+                   </div>
+               </div>
+            </div>
+            <% } %>
+    </div>
+   

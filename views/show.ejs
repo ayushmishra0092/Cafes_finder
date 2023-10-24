@@ -1,0 +1,13 @@
+<% layout('layouts/boilerplate')%>
+
+<h1><%=cafe.cafename %></h1>
+<h3><%=cafe.cafeaddress %></h3>
+<h6><%=cafe.cafedescription %></h6>
+<img src="<%=cafe.cafeimage%>" alt="Image Not Available">
+<div class="mb-3 mt-3">
+    <a class="btn btn-primary " href="/cafes/edit/<%=cafe._id %>">Edit <%=cafe.cafename %></a>
+    <a class="btn btn-primary" href="/cafes">Back</a>
+</div>
+
+
+

@@ -1,0 +1,38 @@
+<% layout('layouts/boilerplate')%>
+
+    <h1>Edit Cafe Details</h1>
+    <div>
+  <form action="/cafes/update/<%=cafe._id %>?_method=PUT" method="POST">
+    <div class="mb-3">
+        <label for="formFile" class="form-label">Cafe Name</label>
+        <input class="form-control" type="text" id="formFile" name="cafe[cafename]" value = "<%=cafe.cafename %>">
+      </div>
+      <div class="mb-3">
+        <label for="formFileMultiple" class="form-label">Owner Name</label>
+        <input class="form-control" type="text" id="formFileMultiple" name="cafe[cafeowner]" value = "<%=cafe.cafeowner %>">
+      </div>
+      <div class="mb-3">
+        <label for="formFileDisabled" class="form-label">Cafe Description</label>
+        <input class="form-control" type="text" id="formFileDisabled" name="cafe[cafedescription]" value = "<%=cafe.cafedescription%>">
+      </div>
+      <div class="mb-3">
+        <label for="formFileDisabled" class="form-label">Cafe Location</label>
+        <input class="form-control" type="text" id="formFileDisabled" name="cafe[cafeaddress]" value = "<%=cafe.cafeaddress%>">
+      </div>
+      <div class="mb-3">
+        <label for="formFileDisabled" class="form-label">Image URL</label>
+        <input class="form-control" type="text" id="formFileDisabled" name="cafe[cafeimage]" value = "<%=cafe.cafeimage%>">
+      </div>
+      <!-- <div class="mb-3">
+        <label for="formFileSm" class="form-label">Closing Time</label>
+        <input class="form-control form-control-sm" id="formFileSm" type="time" >
+      </div> -->
+      <!-- <div>
+        <label for="formFileLg" class="form-label">Choose Image</label>
+        <input class="form-control form-control-lg" id="formFileLg" type="file">
+      </div> -->
+
+      <button class ="btn btn-primary" >Submit</button>
+  <a class="btn btn-primary" href="/cafes">Back</a>
+  </form>
+</div>
